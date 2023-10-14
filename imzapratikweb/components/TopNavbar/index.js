@@ -7,10 +7,10 @@ import Profile from "./Profile";
 import Tooltip from "@mui/material/Tooltip";
 import CurrentDate from "./CurrentDate";
 
-const TopNavbar = ({ toogleActive }:any) => {
+const TopNavbar = ({ toogleActive }) => {
   return (
     <>
-      {/* <topnavbardark> */}
+      <topnavbardark>
         <AppBar
           color="inherit"
           sx={{
@@ -25,7 +25,7 @@ const TopNavbar = ({ toogleActive }:any) => {
           <Toolbar>
             <Tooltip title="Hide/Show" arrow>
               <IconButton
-                size="small"
+                size="sm"
                 edge="start"
                 color="inherit"
                 onClick={toogleActive}
@@ -54,7 +54,7 @@ const TopNavbar = ({ toogleActive }:any) => {
             </Stack>
           </Toolbar>
         </AppBar>
-      {/* </topnavbardark> */}
+      </topnavbardark>
     </>
   );
 };

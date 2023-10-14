@@ -1,7 +1,15 @@
+'use client'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
+import React, { useState } from "react";
+import { usePathname  } from "next/navigation";
+import LeftSidebar from "@/components/LeftSidebar/page";
+import TopNavbar from "@/components/TopNavbar";
+import Footer from "@/components/Footer/page";
+import ScrollToTop from "@/components/ScrollToTop";
+import { constant } from "@/constants/constants";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,16 +23,67 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname  = usePathname ()
+
+  const [active, setActive] = useState(false);
+
+  const toogleActive = () => {
+    setActive(!active);
+  };
   return (
-    <html lang="en">
-       <Head>
+    <html lang="tr">
+      <Head>
         <title>
-          İmza Pratik
+          {constant.title}
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>      
+      <div className={`main-wrapper-content ${active && "active"}`}>
+        {!(
+          pathname === "/authentication/sign-in" ||
+          pathname === "/authentication/sign-up" ||
+          pathname === "/authentication/forgot-password" ||
+          pathname === "/authentication/lock-screen" ||
+          pathname === "/authentication/confirm-mail" ||
+          pathname === "/authentication/logout"
+        ) && (
+          <>
+            <TopNavbar toogleActive={toogleActive} />
+
+            <LeftSidebar toogleActive={toogleActive} />
+          </>
+        )}
+
+        <div className="main-content">
+          {children}
+
+          {!(
+            pathname === "/authentication/sign-in" ||
+            pathname === "/authentication/sign-up" ||
+            pathname === "/authentication/forgot-password" ||
+            pathname === "/authentication/lock-screen" ||
+            pathname === "/authentication/confirm-mail" ||
+            pathname === "/authentication/logout"
+          ) && <Footer />}
+        </div>
+      </div>
+            
+      {/* ScrollToTop */}
+      <ScrollToTop />
+      
+      {/* {!(
+        pathname === "/authentication/sign-in" ||
+        pathname === "/authentication/sign-up" ||
+        pathname === "/authentication/forgot-password" ||
+        pathname === "/authentication/lock-screen" ||
+        pathname === "/authentication/confirm-mail" ||
+        pathname === "/authentication/logout"
+      ) &&
+        // <ControlPanelModal />
+      } */}
+      </body>
     </html>
   )
 }

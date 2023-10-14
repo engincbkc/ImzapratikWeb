@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from "@/components/_App/TopNavbar/Notification.module.css";
+import styles from "./Notification.module.css";
 import {
   IconButton,
   Button,
@@ -14,7 +14,7 @@ import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 const Notification = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
+  const handleClick = (event:any) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
@@ -37,7 +37,7 @@ const Notification = () => {
           aria-expanded={open ? "true" : undefined}
           className="ml-2 for-dark-notification"
         >
-          <Badge color="danger" variant="dot">
+          <Badge color="secondary" variant="dot">
             <NotificationsActiveIcon color="action" />
           </Badge>
         </IconButton>
