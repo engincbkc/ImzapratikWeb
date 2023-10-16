@@ -110,7 +110,7 @@ const Profile = () => {
             <PersonIcon fontSize="small" />
           </ListItemIcon>
           <Link
-            href="/pages/profile/"
+            href="/profile/"
             fontSize="13px"
             color="inherit"
             underline="none"
@@ -124,7 +124,7 @@ const Profile = () => {
             <MailOutlineIcon fontSize="small" />
           </ListItemIcon>
           <Link
-            href="/email/inbox/"
+            href="/email"
             fontSize="13px"
             color="inherit"
             underline="none"
@@ -138,7 +138,7 @@ const Profile = () => {
             <ChatBubbleOutlineIcon fontSize="small" />
           </ListItemIcon>
           <Link
-            href="/apps/chat/"
+            href="/chat/"
             fontSize="13px"
             color="inherit"
             underline="none"
@@ -152,7 +152,7 @@ const Profile = () => {
             <Settings fontSize="small" />
           </ListItemIcon>
           <Link
-            href="/settings/account/"
+            href="/account/"
             fontSize="13px"
             color="inherit"
             underline="none"
@@ -166,7 +166,7 @@ const Profile = () => {
             <AttachMoneyIcon fontSize="small" />
           </ListItemIcon>
           <Link
-            href="/pages/pricing/"
+            href="/pricing/"
             fontSize="13px"
             color="inherit"
             underline="none"

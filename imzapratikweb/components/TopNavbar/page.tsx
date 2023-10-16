@@ -44,10 +44,10 @@ const TopNavbar = ({ toogleActive }:any) => {
               <CurrentDate />
 
               {/* Notification */}
-              <Email />
+              {/* <Email /> */}
 
               {/* Notification */}
-              <Notification />
+              {/* <Notification /> */}
 
               {/* Profile */}
               <Profile />

@@ -6,7 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
-import Popup from 'mycomponents/popup';
+import Popup from '@/components/popup/index';
 
 function UsersTabPopup({visible, onClose}) {
     return (

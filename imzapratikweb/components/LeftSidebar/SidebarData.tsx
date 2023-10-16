@@ -23,7 +23,7 @@ export const SidebarData = [
      iconOpened: <KeyboardArrowDownIcon />,
   },
   {title: "Müşteri Raporları",
-    path: "/customer-report",
+    path: "/customer-reports",
     icon: <GridViewIcon />,
     iconClosed: <KeyboardArrowRightIcon />,
     iconOpened: <KeyboardArrowDownIcon />,

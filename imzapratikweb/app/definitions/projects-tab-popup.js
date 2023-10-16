@@ -9,7 +9,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
-import Popup from 'mycomponents/popup';
+import Popup from '@/components/popup/index';
 import { Box, FormControlLabel} from '@mui/material';
 
 

@@ -1,4 +1,4 @@
-import Popup from 'mycomponents/popup';
+import Popup from '@/components/popup/index';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
