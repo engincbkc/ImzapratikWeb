@@ -1,4 +1,19 @@
 'use client'
+import '../styles/remixicon.css'
+import 'react-tabs/style/react-tabs.css';
+import "swiper/css";
+import "swiper/css/bundle";
+
+// Chat Styles
+import '../styles/chat.css'
+// Globals Styles
+import '../styles/globals.css'
+// Rtl Styles
+import '../styles/rtl.css'
+// Dark Mode Styles
+import '../styles/dark.css'
+// Left Sidebar Dark Mode Styles
+import '../styles/leftSidebarDark.css'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
