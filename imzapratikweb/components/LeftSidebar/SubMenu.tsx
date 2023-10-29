@@ -20,13 +20,14 @@ const SubMenu = ({ item }:any) => {
     setCurrentPath(pathname);
   }, [pathname]);
 
+
   return (
     <>
       <Link
         href={item.path}
         onClick={item.subNav && showSubnav}
         className={`${styles.sidebarLink} ${
-          currentPath == item.path && "sidebarLinkActive"
+          currentPath?.replaceAll(`/`,'') == item?.path?.replaceAll(`/`,'') && "sidebarLinkActive"
         }`}
       >
         <div>

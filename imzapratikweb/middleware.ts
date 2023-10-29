@@ -50,5 +50,5 @@ export async function middleware(request:any) {
   return NextResponse.next();
 }
 
-//export const config = { matcher: ["/reports","/","/customer-reports"] };
-export const config = { matcher: [] };
+export const config = { matcher: ["/reports","/","/customer-reports"] };
+// export const config = { matcher: [] };

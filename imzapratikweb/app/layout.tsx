@@ -39,12 +39,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const pathname  = usePathname ()
-
+  const isLoginPage = pathname.includes('/login');
   const [active, setActive] = useState(false);
 
   const toogleActive = () => {
     setActive(!active);
   };
+
   return (
     <html lang="tr">
       <Head>
@@ -55,7 +56,7 @@ export default function RootLayout({
       </Head>
 
       <body className={inter.className}>      
-      <div className={`main-wrapper-content ${active && "active"}`}>
+      <div className={`${!isLoginPage && 'main-wrapper-content'} ${active && "active"}`}>
         {!(
           pathname === "/authentication/sign-in" ||
           pathname === "/authentication/sign-up" ||
@@ -63,7 +64,7 @@ export default function RootLayout({
           pathname === "/authentication/lock-screen" ||
           pathname === "/authentication/confirm-mail" ||
           pathname === "/authentication/logout"
-        ) && (
+        ) && !isLoginPage &&(
           <>
             <TopNavbar toogleActive={toogleActive} />
 

@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env:{
-       API_URL: process.env.API_URL 
+       API_URL: process.env.API_URL_DEV,
+       BASE_URL: process.env.BASE_URL_DEV
     },
     webpack: (config) => { config.externals.push({ sharp: 'commonjs sharp', canvas: 'commonjs canvas' }); return config },
     reactStrictMode: true,
@@ -16,7 +17,7 @@ const nextConfig = {
     },
     optimizeFonts: false,
     i18n: {
-      locales: ['en', 'ar', 'tr'],
+      locales: ['en', 'ar', ],
       defaultLocale: 'en',
     },
     // images: {

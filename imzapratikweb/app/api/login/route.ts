@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
 
 export async function POST(request: any) {
+console.log("api hitted.")
+
   const reqBody = await request.json();
   try {
-    const resp = await fetch(process.env.API_URL + "/app/login", {
+    const resp = await fetch(process.env.API_URL + "/app/Login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

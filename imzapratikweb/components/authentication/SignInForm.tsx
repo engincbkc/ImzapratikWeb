@@ -28,7 +28,7 @@ const SignInForm: React.FC = () => {
     e.preventDefault();
 
     try {
-      const resp:any = await fetch('api/login', {
+      const resp:any = await fetch(`${process.env.BASE_URL}/api/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
