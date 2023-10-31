@@ -1,6 +1,6 @@
-export interface ExampleResponseModel<T>
+export interface ResponseModel<T>
 {
-    data:T;
-    status:number;
-    message:string;
+    data:T | null;
+    status:number | null;
+    message:string | null;
 }
